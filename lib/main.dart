@@ -1,4 +1,4 @@
-import 'package:componentes/screens/home_screen.dart';
+import 'package:componentes/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +10,23 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      //home: HomeScreen(),
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+        '/': (BuildContext context) => const HomeScreen(),
+        'alert': (BuildContext context) => const AlertScreen(), 
+        'entradas': (BuildContext context) => const InputsScreen(),
+        'camara': (BuildContext context) => const CameraScreen(),
+        'firebase': (BuildContext context) => const FirebaseScreen(),
+      },
+      //para tratar con rutas que no existen en main.dart
+      onGenerateRoute: (RouteSettings settings) {
+        print('Ruta llamada: ${settings.name}');
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AlertScreen());
+      },
     );
   }
 }

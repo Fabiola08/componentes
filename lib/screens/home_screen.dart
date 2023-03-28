@@ -1,5 +1,4 @@
 import 'package:componentes/providers/menu_providers.dart';
-import 'package:componentes/screens/alert_screen.dart';
 import 'package:componentes/utils/set_icons_utils.dart';
 import 'package:flutter/material.dart';
 
@@ -60,10 +59,10 @@ SetIconsUtil iconsUtil = SetIconsUtil();
         leading: iconsUtil.getIcon(opt['icon']),
         trailing: const Icon(Icons.keyboard_arrow_right),
         onTap: () {
-          final route = MaterialPageRoute(builder: (context){
-              return AlertScreen();
-            });
-            Navigator.push(context, route);
+          // final route = MaterialPageRoute(builder: (context){
+          //     return AlertScreen();
+          //   });
+            Navigator.pushNamed(context, opt['ruta']);
         },
       );
       opciones

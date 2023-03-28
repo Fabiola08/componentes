@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class InputsScreen extends StatelessWidget {
-  const InputsScreen({super.key});
+class FirebaseScreen extends StatelessWidget {
+  const FirebaseScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(child: Text('Input'),
+      body: const Center(child: Text('Firebase'),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.pink,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class InputsScreen extends StatelessWidget {
-  const InputsScreen({super.key});
+class CameraScreen extends StatelessWidget {
+  const CameraScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(child: Text('Input'),
+      body: const Center(child: Text('Camara'),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.pink,
